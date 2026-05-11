@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lochstack — Custom software for operationally complex businesses</title>
+  <meta name="description" content="Lochstack is an independent software engineering consultancy. We build optimization engines, scheduling systems, and decision-support tools.">
+  <link rel="canonical" href="https://lochstack.com/">
+  <meta property="og:title" content="Lochstack — Custom software for operationally complex businesses">
+  <meta property="og:description" content="Independent software engineering consultancy building optimization engines, scheduling systems, and decision-support tools.">
+  <meta property="og:url" content="https://lochstack.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⬛</text></svg>">
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --fg: #e8e4dc;
+      --muted: #8a847a;
+      --accent: #b5651d;
+      --rule: #2e2b27;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 3rem 1.5rem;
+      max-width: 44rem;
+      margin: 0 auto;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    header .name {
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      font-size: 1rem;
+    }
+    header nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.15s;
+    }
+    header nav a:hover { color: var(--fg); }
+    section { margin-bottom: 4rem; }
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      max-width: 36rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--fg);
+    }
+    p {
+      font-size: 1rem;
+      color: var(--fg);
+      margin-bottom: 1rem;
+      max-width: 36rem;
+    }
+    p.muted { color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+    a:hover { border-bottom-color: var(--accent); }
+    .service {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .service:last-child { border-bottom: none; }
+    .service p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 0.25rem;
+    }
+    .contact-email {
+      font-size: 1.1rem;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    footer {
+      margin-top: 6rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    @media (max-width: 600px) {
+      body { padding: 2rem 1.25rem; }
+      header { margin-bottom: 3rem; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="name">Lochstack</div>
+    <nav><a href="#contact">Contact</a></nav>
+  </header>
+
+  <section>
+    <h1>Custom software for operationally complex businesses.</h1>
+    <p class="muted">Optimization engines, scheduling systems, and decision-support tools where off-the-shelf products don't fit.</p>
+  </section>
+
+  <section>
+    <h2>About</h2>
+    <p>Lochstack is an independent software engineering consultancy. We build custom systems for businesses whose operations don't fit neatly into existing products — refineries running joint cargo optimisation, logistics operators scheduling against shared constraints, commodity teams reconciling physical flows with financial exposure.</p>
+    <p>The work sits where domain complexity, mathematical modelling, and production-grade engineering meet. Typical engagements combine optimisation (LP, MILP, MINLP), operational scheduling, data pipelines, and the interface layer that makes the result usable.</p>
+  </section>
+
+  <section>
+    <h2>What we do</h2>
+
+    <div class="service">
+      <h3>Optimisation &amp; decision systems</h3>
+      <p>Mathematical optimisation models for operational decisions: blend planning, scheduling, routing, resource allocation. Linear, mixed-integer, and non-linear formulations.</p>
+    </div>
+
+    <div class="service">
+      <h3>Custom operational software</h3>
+      <p>End-to-end systems where the problem is too specific for off-the-shelf products. Data ingestion, domain-specific calculations, operator-facing tooling.</p>
+    </div>
+
+    <div class="service">
+      <h3>Technical due diligence</h3>
+      <p>Independent review of existing systems — architecture, correctness, maintainability. Useful before a build/buy decision, an acquisition, or a major rewrite.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="contact-email"><a href="mailto:hello@lochstack.com">hello@lochstack.com</a></p>
+  </section>
+
+  <footer>
+    Lochstack Ltd · Registered in England &amp; Wales · Company No. XXXXXXXX<br>
+    Registered office: [Address]
+  </footer>
+
+</body>
+</html>
