@@ -8,7 +8,7 @@ set -euo pipefail
 APP_ID="d1983f7nfg001s"
 BRANCH="main"
 REGION="us-east-1"
-PROFILE="${AWS_PROFILE:-personal}"
+PROFILE="personal"
 
 ZIP="$(mktemp -d)/site.zip"
 cd "$(dirname "$0")"
