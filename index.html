@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://lochstack.com/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⬛</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='8' width='20' height='3' fill='%23b5651d'/><rect x='7' y='14.5' width='20' height='3' fill='%23b5651d'/><rect x='4' y='21' width='20' height='3' fill='%23b5651d'/></svg>">
   <style>
     :root {
       --bg: #1a1a1a;
@@ -19,6 +19,7 @@
       --muted: #8a847a;
       --accent: #b5651d;
       --rule: #2e2b27;
+      --code-bg: #141414;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 16px; }
@@ -35,11 +36,22 @@
     header {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
       margin-bottom: 5rem;
       padding-bottom: 1.5rem;
       border-bottom: 1px solid var(--rule);
     }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+    .mark {
+      width: 18px;
+      height: 18px;
+      flex: none;
+    }
+    .mark rect { fill: var(--accent); }
     header .name {
       font-weight: 600;
       letter-spacing: 0.01em;
@@ -94,6 +106,21 @@
       font-size: 0.95rem;
       margin-top: 0.25rem;
     }
+    .shape {
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--code-bg);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.82rem;
+      line-height: 1.8;
+      color: var(--muted);
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .shape .k { color: var(--fg); }
+    .shape .a { color: var(--accent); }
     .contact-email {
       font-size: 1.1rem;
       font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -116,7 +143,14 @@
 <body>
 
   <header>
-    <div class="name">Lochstack</div>
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="4"  y="8"    width="20" height="3"/>
+        <rect x="7"  y="14.5" width="20" height="3"/>
+        <rect x="4"  y="21"   width="20" height="3"/>
+      </svg>
+      <div class="name">Lochstack</div>
+    </div>
     <nav><a href="#contact">Contact</a></nav>
   </header>
 
@@ -129,6 +163,13 @@
     <h2>About</h2>
     <p>Lochstack is an independent software engineering consultancy. We build custom systems for businesses whose operations don't fit neatly into existing products — refineries running joint cargo optimisation, logistics operators scheduling against shared constraints, commodity teams reconciling physical flows with financial exposure.</p>
     <p>The work sits where domain complexity, mathematical modelling, and production-grade engineering meet. Typical engagements combine optimisation (LP, MILP, MINLP), operational scheduling, data pipelines, and the interface layer that makes the result usable.</p>
+
+    <div class="shape" aria-label="Example optimisation problem form">
+<span class="k">minimize</span>     <span class="a">cost</span>(x) + <span class="a">demurrage</span>(t) − <span class="a">revenue</span>(x)
+<span class="k">subject to</span>   mass_balance,  quality ≤ spec,
+             inventory ≥ 0, tank_exclusivity,
+             berth_schedule, laycan_windows
+<span class="k">where</span>        x ∈ ℝⁿ₊,  t ∈ ℝᵐ₊,  y ∈ {0,1}ᵏ</div>
   </section>
 
   <section>
@@ -156,8 +197,7 @@
   </section>
 
   <footer>
-    Lochstack Ltd · Registered in England &amp; Wales · Company No. XXXXXXXX<br>
-    Registered office: [Address]
+    Lochstack Ltd · Registered in England &amp; Wales · Company No. XXXXXXXX
   </footer>
 
 </body>
